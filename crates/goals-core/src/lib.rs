@@ -15,6 +15,7 @@
 
 pub mod domain;
 pub mod error;
+pub mod export;
 pub mod pace;
 pub mod quantity;
 pub mod review;
@@ -25,6 +26,7 @@ pub use domain::{
     Status,
 };
 pub use error::{GoalsError, Result};
+pub use export::Export;
 pub use pace::{Pace, Progress, Reading};
 pub use quantity::Quantity;
 pub use review::ReviewPolicy;

@@ -29,6 +29,7 @@ workloads.
 | Change | Application lines (src + tests) | Sync-specific lines | Upstream changes | Notes |
 |---|---|---|---|---|
 | goals-core: goals, measures, check-ins, reviews, pace, SQLite storage | 2,525 | 0 | none | Built sync-ready: UUID identities, append-mostly check-ins, a milestone's reached state derived from check-ins rather than stored twice. |
+| Export to JSON and CSV (goals#2) | +705 | 0 | none | Encrypted data portability between relays is a sync concern; this is the user's own plaintext export. |
 
 ## Known work before sync
 
@@ -37,5 +38,5 @@ the device side it drives (`LocalStore`: sealing, receiving in chain order,
 membership, enrollment, recovery) is implemented inside `matters-core`
 today, tied to Matters' database. Extracting it into a shared crate is the
 first upstream change this app needs, and is planned after the Matters
-migration and checkpoint work (thestephenromano/matters#243 and
-thestephenromano/matters#245) lands.
+checkpoint and device-setup work (thestephenromano/matters#245 and
+thestephenromano/matters#247) lands, as thestephenromano/matters#246.

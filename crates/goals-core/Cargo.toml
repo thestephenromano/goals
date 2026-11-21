@@ -1,0 +1,23 @@
+[package]
+name = "goals-core"
+version = "0.1.0"
+edition = "2021"
+license.workspace = true
+publish = false
+description = "Goals, their measures, check-ins, reviews, pace and SQLite storage"
+
+[dependencies]
+# The same SQLite stack as Matters (bundled SQLite, so STRICT tables and
+# the same engine on every host).
+rusqlite = { version = "=0.43.0", features = ["bundled"] }
+# Calendar dates; the pace rules count whole local days.
+jiff = "0.2"
+uuid = { version = "1.10", features = ["v4"] }
+thiserror = "2.0"
+dirs = "6.0"
+
+[dev-dependencies]
+# The storage tests open the database file directly to stage damage.
+rusqlite = { version = "=0.43.0", features = ["bundled"] }
+jiff = "0.2"
+tempfile = "3.13"

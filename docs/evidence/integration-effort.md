@@ -37,4 +37,5 @@ the device side it drives (`LocalStore`: sealing, receiving in chain order,
 membership, enrollment, recovery) is implemented inside `matters-core`
 today, tied to Matters' database. Extracting it into a shared crate is the
 first upstream change this app needs, and is planned after the Matters
-migration and checkpoint work (thestephenromano/matters#243 and #245) lands.
+migration and checkpoint work (thestephenromano/matters#243 and
+thestephenromano/matters#245) lands.
